@@ -4,12 +4,17 @@ Vue.use(Router);
 const constantRoutes = [
   {
     path: "/home",
-    component: () => import("../pages/home"),
+    component: () => import("../pages/Home"),
     hidden: true,
     children: [
       {
+        path: '/',
+        component: () => import('../components/Carousel'),
+        hidden: false,
+      },
+      {
         path: 'phone',
-        component: () => import('../pages/phone'),
+        component: () => import('../pages/Phone'),
         hidden: false,
       },
     ]
@@ -17,7 +22,7 @@ const constantRoutes = [
   {
     path: "/",
     redirect: "/home",
-    component: () => import("../pages/home"),
+    component: () => import("../pages/Home"),
     hidden: false,
   },
   {
@@ -31,8 +36,18 @@ const constantRoutes = [
     hidden: true,
   },
   {
-    path: "/login",
-    component: () => import("../pages/login"),
+    path: "/loginIn",
+    component: () => import("../pages/LoginIn"),
+    hidden: true,
+  },
+  {
+    path: "/register",
+    component: () => import("../pages/Register"),
+    hidden: true,
+  },
+  {
+    path: "/shoppingCar",
+    component: () => import("../pages/ShoppingCar"),
     hidden: true,
   },
 ];

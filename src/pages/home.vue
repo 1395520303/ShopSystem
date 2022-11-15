@@ -9,9 +9,10 @@
           lineHeight: '64px',
           textAlign: 'right',
         }"
+        @click="topNavClick"
       >
-        <a-menu-item key="2">请登录</a-menu-item>
-        <a-menu-item key="3">注册</a-menu-item>
+        <a-menu-item key="loginIn">请登录</a-menu-item>
+        <a-menu-item key="register">注册</a-menu-item>
         <a-sub-menu key="service">
           <template #title>客服</template>
           <a-menu-item key="Pocket-S" style="width: 214px; height: 40px">
@@ -21,7 +22,13 @@
             联系客服
           </a-menu-item>
         </a-sub-menu>
-        <a-menu-item key="4">购物车</a-menu-item>
+        <a-menu-item key="shoppingCar"
+          ><a-badge count="5"> 购物车</a-badge></a-menu-item
+        >
+        <a-avatar
+          :size="52"
+          src="https://s2.loli.net/2022/07/27/3a8wlyuXztHfhVE.jpg"
+        />
       </a-menu>
     </a-layout-header>
     <a-layout-content style="padding: 0 50px">
@@ -275,18 +282,21 @@
 </template>
 
 <script>
-
 export default {
-
   methods: {
+    topNavClick({ item, key, keyPath }) {
+      if (key == "loginIn") {
+        this.$router.push("loginIn");
+      } else if (key == "register") {
+        this.$router.push("register");
+      } else if (key == "shoppingCar") {
+        this.$router.push("shoppingCar");
+      }
+    },
     handleClick({ item, key, keyPath }) {
       console.log(item);
       console.log(key);
       console.log(keyPath);
-      console.log(this.$route.path);
-    },
-    handleClick2() {
-      this.$router.push("/home");
     },
   },
 };

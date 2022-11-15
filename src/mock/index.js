@@ -17,3 +17,9 @@ Mock.mock("/conditionList", "get", {
   "row2|1-4": ["@cname"],
   "row3|1-4": ["@cname"],
 });
+Mock.mock("/loginIn", "post", {
+    msg:'sucess'
+});
+Mock.mock("/register", "post", {
+    msg:'sucess'
+});
