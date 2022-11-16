@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { loginIn } from "../api/login";
+import { logIn } from "../api/login";
 export default {
   data() {
     return {
@@ -54,7 +54,7 @@ export default {
       e.preventDefault();
       this.form.validateFields((err, values) => {
         if (!err) {
-          loginIn({})
+          logIn({})
             .then(({ data: { msg } }) => {
               if (msg == "sucess") {
                 this.$router.push("home");

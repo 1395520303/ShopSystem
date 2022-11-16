@@ -11,7 +11,7 @@
         }"
         @click="topNavClick"
       >
-        <a-menu-item key="loginIn">请登录</a-menu-item>
+        <a-menu-item key="login">请登录</a-menu-item>
         <a-menu-item key="register">注册</a-menu-item>
         <a-sub-menu key="service">
           <template #title>客服</template>
@@ -285,8 +285,8 @@
 export default {
   methods: {
     topNavClick({ item, key, keyPath }) {
-      if (key == "loginIn") {
-        this.$router.push("loginIn");
+      if (key == "login") {
+        this.$router.push("login");
       } else if (key == "register") {
         this.$router.push("register");
       } else if (key == "shoppingCar") {

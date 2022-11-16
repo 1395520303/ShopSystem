@@ -12,14 +12,27 @@ Mock.mock("/data", "post", {
     },
   ],
 });
-Mock.mock("/conditionList", "get", {
+Mock.mock("/list/phone", "get", {
   "row1|1-4": ["@cname"],
   "row2|1-4": ["@cname"],
   "row3|1-4": ["@cname"],
 });
-Mock.mock("/loginIn", "post", {
-    msg:'sucess'
+Mock.mock("/type/phone", "get", {
+  "type|3-6": [
+    {
+      name: "@cname",
+      id: "@id",
+      child: {
+        "row1|1-4": ["@cname"],
+        "row2|1-4": ["@cname"],
+        "row3|1-4": ["@cname"],
+      },
+    },
+  ],
+});
+Mock.mock("/login", "post", {
+  msg: "sucess",
 });
 Mock.mock("/register", "post", {
-    msg:'sucess'
+  msg: "sucess",
 });

@@ -1,5 +1,5 @@
 <template>
-  <div>im shopping Car</div>
+  <a-empty />
 </template>
 
 <script>

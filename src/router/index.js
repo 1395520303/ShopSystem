@@ -36,8 +36,8 @@ const constantRoutes = [
     hidden: true,
   },
   {
-    path: "/loginIn",
-    component: () => import("../pages/LoginIn"),
+    path: "/login",
+    component: () => import("../pages/LogIn"),
     hidden: true,
   },
   {

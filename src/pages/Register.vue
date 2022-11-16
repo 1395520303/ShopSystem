@@ -57,7 +57,7 @@ export default {
           register({})
             .then(({ data: { msg } }) => {
               if (msg == "sucess") {
-                this.$router.push("loginIn");
+                this.$router.push("login");
               }
             })
             .catch((err) => {
