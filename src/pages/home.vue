@@ -15,12 +15,8 @@
         <a-menu-item key="register">注册</a-menu-item>
         <a-sub-menu key="service">
           <template #title>客服</template>
-          <a-menu-item key="Pocket-S" style="width: 214px; height: 40px">
-            服务中心
-          </a-menu-item>
-          <a-menu-item key="2" style="width: 214px; height: 40px">
-            联系客服
-          </a-menu-item>
+          <a-menu-item key="Pocket-S"> 服务中心 </a-menu-item>
+          <a-menu-item key="2"> 联系客服 </a-menu-item>
         </a-sub-menu>
         <a-menu-item key="shoppingCar"
           ><a-badge count="5"> 购物车</a-badge></a-menu-item
@@ -42,232 +38,15 @@
       <a-layout style="padding: 24px 0; background: #fff; height: 100vh">
         <a-layout-sider width="200" style="background: #fff">
           <a-menu style="width: 200px" mode="vertical" @click="handleClick">
-            <a-sub-menu key="phone">
-              <template #title>手机</template>
-              <a-menu-item key="Pocket-S" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Pocket-S
-              </a-menu-item>
-              <a-menu-item key="2" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="3" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="4" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="5" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                查看更多
-              </a-menu-item>
-            </a-sub-menu>
-            <a-sub-menu key="laptop">
-              <template #title>电脑</template>
-              <a-menu-item key="1" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="2" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="3" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="4" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="5" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                查看更多
-              </a-menu-item>
-            </a-sub-menu>
-            <a-sub-menu key="pad">
-              <template #title>平板</template>
-              <a-menu-item key="1" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="2" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="3" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="4" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="5" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                查看更多
-              </a-menu-item>
-            </a-sub-menu>
-            <a-sub-menu key="screen">
-              <template #title>智慧屏</template>
-              <a-menu-item key="1" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="2" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="3" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="4" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="5" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                查看更多
-              </a-menu-item>
-            </a-sub-menu>
-            <a-sub-menu key="wear">
-              <template #title>穿戴</template>
-              <a-menu-item key="1" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="2" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="3" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="4" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="5" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                查看更多
-              </a-menu-item>
-            </a-sub-menu>
-            <a-sub-menu key="headphone">
-              <template #title>耳机音响</template>
-              <a-menu-item key="1" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="2" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="3" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="4" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                Mate系列
-              </a-menu-item>
-              <a-menu-item key="5" style="width: 214px; height: 72px">
-                <img
-                  style="width: 52px; height: 52px"
-                  src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                />
-                查看更多
+            <a-sub-menu v-for="(item, index) in sideBarList" :key="index">
+              <template #title>{{ index }}</template>
+              <a-menu-item
+                v-for="_item in item"
+                :key="_item.name"
+                style="width: 214px; height: 72px"
+              >
+                <img style="width: 52px; height: 52px" :src="_item.pic" />
+                {{ _item.name }}
               </a-menu-item>
             </a-sub-menu>
           </a-menu>
@@ -282,8 +61,18 @@
 </template>
 
 <script>
+import { getsideBarList } from "../api/index";
 export default {
+  data() {
+    return {
+      sideBarList: {},
+    };
+  },
   methods: {
+    async getList() {
+      const { data } = await getsideBarList();
+      this.sideBarList = data;
+    },
     topNavClick({ item, key, keyPath }) {
       if (key == "login") {
         this.$router.push("login");
@@ -298,6 +87,9 @@ export default {
       console.log(key);
       console.log(keyPath);
     },
+  },
+  created() {
+    this.getList();
   },
 };
 </script>

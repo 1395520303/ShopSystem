@@ -21,8 +21,8 @@ const constantRoutes = [
   },
   {
     path: "/",
-    redirect: "/home",
-    component: () => import("../pages/Home"),
+    redirect: "/test",
+    component: () => import("../test/index.vue"),
     hidden: false,
   },
   {

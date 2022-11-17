@@ -12,10 +12,11 @@ Mock.mock("/data", "post", {
     },
   ],
 });
-Mock.mock("/list/phone", "get", {
-  "row1|1-4": ["@cname"],
-  "row2|1-4": ["@cname"],
-  "row3|1-4": ["@cname"],
+Mock.mock("/list/sideBar", "get", {
+  "sdf1|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
+  "sdf2|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
+  "sdf3|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
+  "sdf4|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
 });
 Mock.mock("/type/phone", "get", {
   "type|3-6": [
@@ -29,10 +30,4 @@ Mock.mock("/type/phone", "get", {
       },
     },
   ],
-});
-Mock.mock("/login", "post", {
-  msg: "sucess",
-});
-Mock.mock("/register", "post", {
-  msg: "sucess",
 });

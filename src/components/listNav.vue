@@ -7,33 +7,46 @@
       :animated="false"
       size="small"
     >
-      <a-tab-pane key="1" tab="Pocket系列">
-        <div class="condition">
-          <div class="discount">服务优惠：</div>
-          <div class="discount">屏幕尺寸</div>
-          <div class="discount">更多选项</div>
-          <div class="discount">排序</div>
-        </div>
-      </a-tab-pane>
-      <a-tab-pane key="2" tab="华为畅享系列"> </a-tab-pane>
-      <a-tab-pane key="3" tab="nova系列"> </a-tab-pane>
-      <a-tab-pane key="4" tab="P系列"> Content of Tab Pane 3 </a-tab-pane>
-      <a-tab-pane key="5" tab="Mate系列"> Content of Tab Pane 3 </a-tab-pane>
-      <a-tab-pane key="6" tab="华为认证二手机">
-        Content of Tab Pane 3
-      </a-tab-pane>
-      <a-tab-pane key="7" tab="华为官方翻新">
-        Content of Tab Pane 3
+      <a-tab-pane v-for="item in typelist" :key="item.id" :tab="item.name">
+        <a-checkbox-group @change="onChange">
+          <div v-for="(_item, index) in item.child" :key="index">
+            <span>{{ index + ":" }}</span>
+            <a-checkbox :value="i" v-for="(i, _index) in _item" :key="_index">
+              {{ i }}
+            </a-checkbox>
+          </div>
+        </a-checkbox-group>
       </a-tab-pane>
     </a-tabs>
   </div>
 </template>
 <script>
+import { getPhoneType } from "../api/index";
 export default {
+  data() {
+    return {
+      typelist: [],
+      value: [],
+    };
+  },
   methods: {
+    async getType() {
+      const {
+        data: { type },
+      } = await getPhoneType();
+      console.log(type);
+      this.typelist = type;
+    },
+    onChange(checkedValues) {
+      console.log("checked = ", checkedValues);
+      console.log("value = ", this.value);
+    },
     callback(key) {
       console.log(key);
     },
+  },
+  created() {
+    this.getType();
   },
 };
 </script>

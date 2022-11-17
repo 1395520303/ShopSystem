@@ -12,16 +12,16 @@
         <a-icon type="right-circle" />
       </div>
       <div>
-        <img src="../assets/butterfly.jpg" alt="" />
+        <img src="#" alt="pic" />
       </div>
       <div>
-        <img src="../assets/butterfly.jpg" alt="" />
+        <img src="#" alt="pic" />
       </div>
       <div>
-        <img src="../assets/y.jpg" alt="" />
+        <img src="#" alt="pic" />
       </div>
       <div>
-        <img src="../assets/y.jpg" alt="" />
+        <img src="#" alt="pic" />
       </div>
     </a-carousel>
   </div>
