@@ -12,9 +12,9 @@
         @click="topNavClick"
       >
         <a-menu-item key="login">{{
-          user.name ? "登出" : "请登录"
+          userName ? "登出" : "请登录"
         }}</a-menu-item>
-        <a-menu-item key="register" v-if="!user.name">注册</a-menu-item>
+        <a-menu-item key="register" v-if="!userName">注册</a-menu-item>
         <a-sub-menu key="service">
           <template #title>客服</template>
           <a-menu-item key="Pocket-S"> 服务中心 </a-menu-item>
@@ -72,10 +72,14 @@ export default {
   },
   data() {
     return {
+      userName: window.localStorage.getItem("userName"),
       sideBarList: {},
     };
   },
   methods: {
+    breakRoute() {
+      console.log(this.$route.fullPath);
+    },
     async getList() {
       const data = await getsideBarList();
       this.sideBarList = data;
@@ -99,6 +103,7 @@ export default {
   },
   created() {
     this.getList();
+    this.breakRoute()
   },
 };
 </script>

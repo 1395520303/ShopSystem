@@ -25,17 +25,14 @@ import { getPhoneType } from "../api/index";
 export default {
   data() {
     return {
-      typelist: [],
+      typelist: {},
       value: [],
     };
   },
   methods: {
     async getType() {
-      const {
-        data: { type },
-      } = await getPhoneType();
-      console.log(type);
-      this.typelist = type;
+      const data = await getPhoneType();
+      this.typelist = data;
     },
     onChange(checkedValues) {
       console.log("checked = ", checkedValues);

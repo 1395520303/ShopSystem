@@ -32,7 +32,7 @@ import { getPhoneType } from "../api/index";
 export default {
   data() {
     return {
-      typelist: [],
+      typelist: {},
       value: [],
     };
   },
@@ -51,11 +51,9 @@ export default {
       console.log("value = ", this.value);
     },
     async getType() {
-      const {
-        data: { type },
-      } = await getPhoneType();
-      console.log(type);
-      this.typelist = type;
+      const data = await getPhoneType();
+      console.log(data);
+      this.typelist = data;
     },
   },
   created() {
