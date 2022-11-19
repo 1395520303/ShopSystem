@@ -12,6 +12,12 @@ request.defaults.headers.post["Content-Type"] =
 const token = window.localStorage.getItem("token");
 request.interceptors.request.use(
   (config) => {
+    const token = window.localStorage.getItem("token");
+    if (token) {
+      config.headers = {
+        Authorization: `Bearer ${token}`,
+      };
+    }
 
     config.transformRequest = [
       function (data) {
@@ -33,7 +39,6 @@ request.interceptors.request.use(
 request.interceptors.response.use(
   (response) => {
     const res = response.data;
-
     return res;
   },
   function (error) {
