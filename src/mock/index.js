@@ -12,12 +12,7 @@ Mock.mock("/data", "post", {
     },
   ],
 });
-Mock.mock("/list/sideBar", "get", {
-  "sdf1|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
-  "sdf2|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
-  "sdf3|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
-  "sdf4|4-5": [{ name: "@cname", pic: "@image('52x52','#FF6600')" }],
-});
+
 Mock.mock("/type/phone", "get", {
   "type|3-6": [
     {

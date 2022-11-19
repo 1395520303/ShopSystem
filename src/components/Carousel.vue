@@ -11,35 +11,42 @@
       <div slot="nextArrow" class="custom-slick-arrow" style="right: 10px">
         <a-icon type="right-circle" />
       </div>
-      <div>
-        <img src="#" alt="pic" />
-      </div>
-      <div>
-        <img src="#" alt="pic" />
-      </div>
-      <div>
-        <img src="#" alt="pic" />
-      </div>
-      <div>
-        <img src="#" alt="pic" />
+      <div v-for="(item, index) in bannerList" :key="index" >
+        <img :src="item.src" alt="pic" style="transform:translateX(-650px)"/>
       </div>
     </a-carousel>
   </div>
 </template>
 
 <script>
-export default {};
+import { getBannerList } from "../api/list";
+export default {
+  data() {
+    return {
+      bannerList: {},
+    };
+  },
+  methods: {
+    async getList() {
+      const data = await getBannerList();
+      this.bannerList = data;
+    },
+  },
+  created() {
+    this.getList();
+  },
+};
 </script>
 
 <style scoped>
-.outer{
-    margin: 0 auto;
-    width: 1000px;
-    height: 600px;
+.outer {
+  margin: 0 auto;
+  width: 1200px;
+  height: 600px;
 }
-.ant-carousel{
-    height: 100%;
-    width: 100%;
+.ant-carousel {
+  height: 100%;
+  width: 100%;
 }
 .ant-carousel >>> .slick-slide {
   height: 600px;
@@ -50,15 +57,14 @@ export default {};
   width: 25px;
   height: 25px;
   font-size: 25px;
-  color: #fff;
-  background-color: rgba(31, 45, 61, 0.11);
-  opacity: 0.3;
+  color: black;
+  opacity: 0.5;
 }
 .ant-carousel >>> .custom-slick-arrow:before {
   display: none;
 }
 .ant-carousel >>> .custom-slick-arrow:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 img {
   height: 600px;

@@ -8,7 +8,7 @@ import { createPinia, PiniaVuePlugin, setMapStoreSuffix } from "pinia";
 
 Vue.use(PiniaVuePlugin);
 Vue.use(Antd);
-require('./mock/index')
+// require('./mock/index')
 Vue.config.productionTip = false;
 setMapStoreSuffix("");
 const pinia = createPinia();

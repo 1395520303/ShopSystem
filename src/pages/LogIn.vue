@@ -1,7 +1,7 @@
 <template>
   <div class="back">
     <div class="left">
-      <img src="../assets/mall.png" alt="">
+      <img src="../assets/mall.png" alt="" />
     </div>
     <div class="division"></div>
     <div class="loginFrame">
@@ -52,8 +52,13 @@
 </template>
 
 <script>
+import { mapStores } from "pinia";
+import { useUserStore } from "@/stores/user";
 import { logIn } from "../api/login";
 export default {
+  computed: {
+    ...mapStores(useUserStore),
+  },
   data() {
     return {
       formLayout: "horizontal",
@@ -67,9 +72,10 @@ export default {
         if (!err) {
           this.$message.loading("请稍后..", 1.5).then(() => {
             logIn(values)
-              .then(({ msg }) => {
+              .then(({ msg, name,token }) => {
                 if (msg == "success") {
                   this.$message.success("登录成功", 1);
+                  this.user.setInfo(name,token);
                   this.$router.push("home");
                 } else {
                   this.$message.error("用户名或密码错误", 1);
@@ -109,7 +115,7 @@ export default {
   position: relative;
   background-color: antiquewhite;
 }
-.division{
+.division {
   height: 80vh;
   width: 6px;
   background-color: black;

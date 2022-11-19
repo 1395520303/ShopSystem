@@ -11,7 +11,9 @@
         }"
         @click="topNavClick"
       >
-        <a-menu-item key="login">请登录</a-menu-item>
+        <a-menu-item key="login">{{
+          user.name ? "登出" : "请登录"
+        }}</a-menu-item>
         <a-menu-item key="register">注册</a-menu-item>
         <a-sub-menu key="service">
           <template #title>客服</template>
@@ -61,8 +63,13 @@
 </template>
 
 <script>
+import { mapStores } from "pinia";
+import { useUserStore } from "@/stores/user";
 import { getsideBarList } from "../api/index";
 export default {
+  computed: {
+    ...mapStores(useUserStore),
+  },
   data() {
     return {
       sideBarList: {},
@@ -70,12 +77,14 @@ export default {
   },
   methods: {
     async getList() {
-      const { data } = await getsideBarList();
+      const data = await getsideBarList();
       this.sideBarList = data;
     },
     topNavClick({ item, key, keyPath }) {
-      if (key == "login") {
+      if (key == "login" && !this.user.name) {
         this.$router.push("login");
+      } else if (key == "login" && this.user.name) {
+        this.user.logOut();
       } else if (key == "register") {
         this.$router.push("register");
       } else if (key == "shoppingCar") {

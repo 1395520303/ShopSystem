@@ -9,8 +9,10 @@ request.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded;charset=UTF-8";
 
 // 请求拦截器
+const token = window.localStorage.getItem("token");
 request.interceptors.request.use(
   (config) => {
+
     config.transformRequest = [
       function (data) {
         let ret = "";
@@ -21,7 +23,6 @@ request.interceptors.request.use(
         return ret;
       },
     ];
-    // config.data = { params: JSON.stringify(config.data) || '' }
     return config;
   },
   function (error) {
